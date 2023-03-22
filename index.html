@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="login" onclick="user.login()">Entrar</button>
+
+    <script>
+        /*
+        Esse é o codigo JavaScript dessa página.
+        */
+
+        var name = "Manuel Calça Larga"
+        var email = "manularga@gmail.com"
+        var birth = "2003-03-21"
+        var cpf = "000.000.000-00"
+        var adress = "Rua do Coqueral, 69"
+
+        //Dados do Usuário. Forma moderna !
+        var user = {
+            name : "Manuel Calça Larga",
+            email : "manularga@gmail.com",
+            birth : "2003-03-21",
+            cpf : "000.000.000-00",
+            adress : "Rua do Coqueral, 69",
+            password : "123456",
+            //Métodos de objeto "user". 
+            login: function() {
+                
+                //Recebe o e-mail do prompt e armazena.
+                var userEmail = prompt( 'Digite seu E-mail:')
+
+                //Se o usuário não digitou nada...
+                if(userEmail == ''|| userEmail == null){
+                    alert('Opa amigão, coloca um E-mail ai...')
+
+
+                    // Encerra a função retornando false
+                    return false
+                
+                } else if(userEmail != user.email) {
+                        alert("Opa, e-mail não cadastrado...")
+                        return false
+                }
+
+                    // Digite a senha.
+                    var userPass = prompt('Digite sua senha')
+                    if (userPass == "" || userPass == null){
+                        alert("Opa, insira uma senha válida!")
+
+                        // Encerra a função retornando false
+                        return false
+                    } 
+                    },
+
+            
+            firstName: function(name) {
+                alert(name.split(' ')[0])
+            }
+        }
+
+        //Chama a função de login.
+      // user.login()
+
+    </script>
+</body>
+
+</html>
