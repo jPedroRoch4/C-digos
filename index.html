@@ -24,12 +24,15 @@
 
         //Dados do Usuário. Forma moderna !
         var user = {
+
+            //Atributos do objeto "User"
             name : "Manuel Calça Larga",
             email : "manularga@gmail.com",
             birth : "2003-03-21",
             cpf : "000.000.000-00",
             adress : "Rua do Coqueral, 69",
             password : "123456",
+            photo : "https://randomuser.me/api/portraits/men/90.jpg",
             //Métodos de objeto "user". 
             login: function() {
                 
@@ -56,13 +59,34 @@
 
                         // Encerra a função retornando false
                         return false
-                    } 
+                    } else if(userPass != user.password) {
+                        alert("Opa, senha incorreta !")
+                        return false
+                                           
+                    }
+                         if (userPass == userPass){
+                            alert('Seja bem vindo ' + user.name)
+                         }   
+
+
+                        document.write('<img src="' + user.photo + '"> Olá ' + user.name + '!')
+                         localStorage.userdata = JSON.stringify({
+                            name: user.name,
+                            email: user.email
+
+                         })
+
+                         let parts = user.birth.split('-')
+                         let bdate = parts[2] +'/' + parts[1] + '/' + parts[0]
+                         document.write('  Nascido em ' + bdate)
+
                     },
 
             
             firstName: function(name) {
                 alert(name.split(' ')[0])
             }
+        
         }
 
         //Chama a função de login.
