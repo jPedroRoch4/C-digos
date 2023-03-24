@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button id="calculador" onclick="idade()">Calculadora de Idade</button>
+
+    <script>
+
+function idade(diaNiver, mesNiver, anoNiver) {
+    var d = new Date,
+
+        hoje = date.getDate();
+        esseMes = date.getMonth() + 1;
+        esseAno = date.getYear();
+
+        anoNiver = +anoNiver,
+        mesNiver = +mesNiver,
+        diaNiver = +diaNiver,
+
+        idadeHoje = esseAno - anoNiver;
+
+        if (esseMes < mesNiver || esseMes == mesNiver && hoje < diaNiver){
+            idadeHoje--;
+        
+        }
+
+        documen.write(idadeHoje < 0 ? 0 : idadeHoje);
+}
+  
+
+
+    </script>
+
+
+
+</body>
+
+</html>
