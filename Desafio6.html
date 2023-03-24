@@ -12,8 +12,8 @@
 
     <script>
         var data = prompt('Digite a data de seu nascimento...')
-        let parts = data.split('-')
-        let bdate = parts[2] + '/' + parts[1] + '/' + parts[0]
+        let parts = data.split('/')
+        let bdate = parts[2] + '-' + parts[1] + '-' + parts[0]
         document.write(bdate)
 
     </script>
