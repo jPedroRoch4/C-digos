@@ -15,27 +15,30 @@
 
     <script>
 
-function idade(diaNiver, mesNiver, anoNiver) {
-    var d = new Date,
+        function idade() {
+            var date = new Date()
+console.log(date)
+            hoje = date.getDate();
+            esseMes = date.getMonth() + 1;
+            esseAno = date.getFullYear();
+            var nascimento = prompt("Digite usa data de nascimento no formato dd/mm/aaaa.")
+            var partes = nascimento.split("/")
+            anoNiver = partes[2]
+            mesNiver = partes[1]
+            diaNiver = partes[0]
+console.log(esseAno)
+            idadeHoje = esseAno - anoNiver;
 
-        hoje = date.getDate();
-        esseMes = date.getMonth() + 1;
-        esseAno = date.getYear();
+            if (esseMes < mesNiver) {
+                idadeHoje--
+            } else if (esseMes == mesNiver && hoje < diaNiver) {
+                idadeHoje--;
 
-        anoNiver = +anoNiver,
-        mesNiver = +mesNiver,
-        diaNiver = +diaNiver,
+            }
 
-        idadeHoje = esseAno - anoNiver;
-
-        if (esseMes < mesNiver || esseMes == mesNiver && hoje < diaNiver){
-            idadeHoje--;
-        
+            document.write(`Você tem ${idadeHoje}`);
         }
 
-        documen.write(idadeHoje < 0 ? 0 : idadeHoje);
-}
-  
 
 
     </script>
